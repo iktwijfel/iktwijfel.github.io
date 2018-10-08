@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700');
+/* reset */
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+    box-sizing: border-box; /* Zorgt ervoor dat je divs niet vergroten bij het gebruik van padding. */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+/* init css */
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;
+}
+#container{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #242424;
+    width: 600px;
+    height: 100%;
+    /* margin: auto; */
+    margin-left: auto;
+    margin-right:auto;
+    /* display: flex; */
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+header{
+    text-align: center;
+    width: 100%;
+    min-height: 10%;
+    margin-top: 2em;
+    margin-bottom:2em;
+}
+img#logoGroen{
+    margin-left: auto;
+    margin-right:auto;
+    display: none;
+}
+h1{
+    width: 100%;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+    font-size: 4rem;
+}
+#rad{
+    width: 100%;
+    margin-left: auto;
+    margin-right:auto;
+    padding-top: 1px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+#rad #indicator{
+    display: block;
+    width: 60px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 30px);
+    right: calc(50% - 30px);
+    z-index: 10;
+}
+#rad #radimg{
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 40px;
+}
+#result{
+    margin: auto;
+    display: none;
+}
+#result p{
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.btn{display: block;background-color: #ffffff; border: 4px solid #242424;border-radius: 42px;/* box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.36); */box-shadow: 0 7px rgba(0, 0, 0, 0.70);padding: 20px 40px;font-family: 'Roboto Condensed', sans-serif;font-size: 3rem;color: #242424;margin: auto;cursor: pointer;}
+.btn:hover{box-shadow: 0 5px rgba(0, 0, 0, 0.70);transform: translateY(2px);}
+.otherbtn{display: block;margin: auto;background-color: rgba(0,0,0,0);border: 4px solid #ffffff;font-family: 'Roboto Condensed', sans-serif;font-size: 2rem;border-radius: 42px;color: white;padding: 5px 20px;box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.36);cursor: pointer;}
+.otherbtn:hover{box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.36)}
+.grey-bg{
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(223,223,223,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(223,223,223,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, rgba(255,255,255,1) 0%,rgba(223,223,223,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dfdfdf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* groen css */
+.groen-bg{
+    background: #6bc570; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #6bc570 0%, #008d7d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #6bc570 0%,#008d7d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #6bc570 0%,#008d7d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6bc570', endColorstr='#008d7d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+@media only screen and (max-width: 600px){
+    #container{width: 100%;padding: 10px;}
+    img#logoGroen{height:5rem}
+    #rad #indicator{width: 40px;left: calc(50% - 20px);right: calc(50% - 20px);top: 15px;}
+    header{margin-bottom:0; margin-top:1em}
+    #rad #radimg{width: 300px;}
+    #result p{font-size:1.2rem;}
+    .btn{font-size: 2rem;}
+}
